@@ -1,0 +1,172 @@
+extends ../layouts/main-layout.pug
+
+block title
+  title Главная
+
+block content
+  <!-- / ========= header ========= \ -->
+  header.page-header.page-header--closed
+    .page-header__wrapper
+      .page-header__logo-container
+          button.page-header__toggle
+            span.visually-hidden Открыть меню
+          a(href="#").page-header__logo
+            svg.page-header__logo-svg.page-header__logo-svg--mobile(width='100%', height='100%')
+              use(xlink:href='#logo-mobile')
+            svg.page-header__logo-svg.page-header__logo-svg--tablet(width='100%', height='100%')
+              use(xlink:href='#logo-tablet')
+            svg.page-header__logo-svg.page-header__logo-svg--desktop(width='100%', height='100%')
+              use(xlink:href='#logo-desktop')
+      nav.main-nav.main-nav--closed
+        .main-nav__wrapper
+          ul.main-nav__list.site-list
+            li.site-list__item
+              a(href="#").site-list__link Каталог товаров
+            li.site-list__item
+              a(href="#").site-list__link Вязание на заказ
+          .user-block
+            ul.user-block__list
+              li.user-block__item
+                a(href="#").user-block__link.user-block__link--search
+                  svg.user-block__icon(width='20', height='20')
+                    use(xlink:href='#icon-search')
+                  span.user-block__text.user-block__text--search Поиск по сайту
+              li.user-block__item
+                a(href="#").user-block__link
+                  svg.user-block__icon(width='20', height='20')
+                    use(xlink:href='#icon-cart')
+                  span.user-block__text Корзина: пока пуста
+
+  <!-- / ========= content ========= \ -->
+  main.index-page
+    section.section-nav
+      .container
+        .section__wrapper
+          nav.section-nav__navigation
+              ul.section-nav__list
+                li.section-nav__item
+                  a(href="#").section-nav__link Каталог товаров
+                li.section-nav__item
+                  a(href="#").section-nav__link Вязание на заказ
+          nav.nav-offers
+            ul.nav-offers__list
+              li.nav-offers__item
+                a(href="#").nav-offers__link Новые поступления
+              li.nav-offers__item
+                a(href="#").nav-offers__link Распродажа
+              li.nav-offers__item.nav-offers__item--delivery Бесплатная доставка по России
+
+    h1.visually-hidden Мишка магазин вязания
+    section.first-row
+      .first-row__wrapper
+        h2.first-row__title
+          | Милые штуки
+          br 
+          |  ручной
+          br 
+          |  работы для дома
+        .first-row__list
+          a(href="#").first-row__item.first-row__item--interior
+            .first-row__text Предметы интерьера
+            svg(width='40', height='62').first-row__icon.first-row__icon--interior
+              use(xlink:href='#icon-interior')
+          a(href="#").first-row__item.first-row__item--toy
+            .first-row__text Детские игрушки
+            svg(width='60', height='60').first-row__icon.first-row__icon--toy
+              use(xlink:href='#icon-toy')
+
+    section.product
+      .container
+        .product__inner
+          .product__header
+            h2.product__title Вязаные корзинки
+            .product__subtitle Товар недели
+          .product__wrapper
+            .product__info
+              .product__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+              table.product__list
+                tr.product__item
+                  td.product__key Цвет:
+                  td.product__value «Тиффани»/серый
+                tr.product__item
+                  td.product__key Диаметр:
+                  td.product__value 25 см
+                tr.product__item
+                  td.product__key Высота:
+                  td.product__value 15 см
+            .product__wrapper-image
+              picture
+                source(type='image/webp', media='(min-width: 1250px)', srcset='/images/desktop/product.webp 1x,/images/desktop/product@2x.webp 2x')
+                source(type='image/webp', media='(min-width: 768px)', srcset='/images/ipad/product.webp 1x, /images/ipad/product@2x.webp 2x')
+                source(type='image/webp', srcset='/images/iphone/product.webp 1x, /images/iphone/product.webp 2x')
+
+                source(media="(min-width: 1250px)" srcset="/images/desktop/product.jpg 1x, /images/desktop/product@2x.jpg 2x")
+                source(media="(min-width: 768px)" srcset="/images/ipad/product.jpg 1x, /images/ipad/product@2x.jpg 2x")
+                img(src="/images/iphone/product.jpg" srcset='/images/iphone/product@2x.jpg 2x').product__image
+            .product__footer
+              .product__price Цена: 990 руб.
+              button.button.product__button Заказать
+    section.about
+      .container
+        .about__wrapper
+          h2.about__title Коротко о нас
+          ul.about__list
+            li.about__item.about__item--flower
+              svg.flower-icon(width='32', height='37').about__item-icon
+                use(xlink:href='#icon-feature-flower')
+              .about__text Экологически чистые материалы
+            li.about__item.about__item--price
+              svg(width='48', height='28').about__item-icon
+                use(xlink:href='#icon-feature-money')
+              .about__text Скандинавский стиль по российской цене
+            li.about__item.about__item--heart
+              svg(width='34', height='27').about__item-icon
+                use(xlink:href='#icon-feature-heart')
+              .about__text Увеличивает лайки на фотографиях
+            li.about__item.about__item--ball
+              svg(width='36', height='34').about__item-icon
+                use(xlink:href='#icon-feature-ball')
+              .about__text Связано вручную с любовью и умилением
+            li.about__item.about__item--rocket
+              svg(width='56', height='25').about__item-icon
+                use(xlink:href='#icon-feature-rocket')
+              .about__text Поддержка отечественного производителя
+            li.about__item.about__item--present
+              svg(width='34', height='33').about__item-icon
+                use(xlink:href='#icon-feature-gift')
+              .about__text Поставляйется в подарочной упаковке
+    section.reviews
+      .reviews__wrap
+        h2.reviews__title Отзывы
+        .reviews__text Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+        .reviews__footer
+          .reviews__user
+            .reviews__name Анастасия Красильникова
+            .reviews__login @misssssiskras
+          .reviews__controller
+            button.reviews__button.reviews__button--prev
+              | Назад
+              svg(width='50', height='26').reviews__icon
+                use(xlink:href='#icon-left-arrow')
+            button.reviews__button.reviews__button--next
+              | Вперед
+              svg(width='50', height='26').reviews__icon
+                use(xlink:href='#icon-right-arrow')
+        button.button.reviews__button-write Написать
+    section.contacts
+      .contacts__wrapper
+        .contacts__content
+          .contacts__header
+            h2.contacts__title Контакты
+            svg(width='51', height='87').contacts__icon
+              use(xlink:href='#icon-flag')
+          ul.contacts__list
+            li.contacts__item
+              span.contacts__key email:
+              a(href="#").contacts__value.contacts__value--email info@mimimishkashop.ru
+            li.contacts__item
+              span.contacts__key адрес:
+              span.contacts__value.contacts__value--adress г. Санкт-Петербург, ул. Большая Конюшенная,  д. 19/8, офис 101
+        //- .contacts__map
+        //-   iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xfbeb3cbd3eed50c8!2sBolshaya+Konyushennaya+ul.%2C+19%2C+101%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1506859806364', style='border:0', allowfullscreen='')
+        buttom.button.contacts__button Напишите нам

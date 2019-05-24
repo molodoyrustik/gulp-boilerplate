@@ -1,0 +1,53 @@
+.nav-offers {
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.nav-offers__list {
+  display: flex;
+}
+
+.nav-offers__item {
+  display: none;
+  @include desktop {
+    display: block;
+    margin-left: 60px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.nav-offers__item--delivery {
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444;
+  @include desktop {
+    margin-left: auto;
+  }
+}
+
+.nav-offers__link {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  background-position: 30px center;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

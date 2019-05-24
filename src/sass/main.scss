@@ -1,0 +1,29 @@
+// variables
+$footer-height: 190px;
+$container-width: 940px;
+$bg-darkgrey: #292929;
+$bg-lightgrey: #f8f5f2;
+$mobile-width-only: 767px;
+
+// layout
+@import "_misc/fonts";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+// blocks
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/user-block";
+@import "blocks/section-nav";
+@import "blocks/nav-offers";
+@import "blocks/button";
+
+// index-page
+@import "blocks/index-page";
+@import "blocks/first-row";
+@import "blocks/product";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/contacts";
+@import "blocks/page-footer";

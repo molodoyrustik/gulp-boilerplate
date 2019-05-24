@@ -1,0 +1,63 @@
+.main-nav {
+  border-top: 1px solid #ececec;
+  @include tablet {
+    border: none;
+  }
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.main-nav--closed {
+  
+}
+
+.main-nav--opened {
+  display: block;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  display: none; 
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  @include tablet {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    margin: 0;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// только для мобильных экранов
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    display: block;
+  }
+}

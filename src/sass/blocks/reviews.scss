@@ -1,0 +1,180 @@
+.reviews {
+  padding-bottom: 52px;
+  background-image: url('/images/bg/bg-zigzag-line.svg');
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: auto 7px;
+  @include tablet {
+    background-size: auto 15px;
+  }
+  @include desktop {
+    background-size: auto;
+  }
+}
+
+.reviews__wrap {
+  width: 260px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+  @include tablet {
+    position: relative;
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background: url('/images/ipad/review.jpg') no-repeat;
+    background-size: 350px auto;
+    @include retina {
+      background: url('/images/ipad/review@2x.jpg') no-repeat;
+    }
+  }
+  @include desktop {
+    width: 1050px;
+    box-sizing: border-box;
+    padding-left: 175px;
+    padding-right: 100px;
+  }
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+  @include tablet {
+    width: 334px;
+    margin-bottom: 55px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @include desktop {
+    margin-bottom: 60px - (30px - 17px) / 2;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 29px;
+  color: #444444;
+  @include tablet {
+    width: 687px;
+    margin-bottom: 50px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.reviews__footer {
+ @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+}
+
+.reviews__user {
+  margin-bottom: 35px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.reviews__name {
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #000000;
+  @include tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.reviews__login {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #444444;
+  @include tablet {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.reviews__controller {
+  display: flex;
+  margin-bottom: 38px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.reviews__button {
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  width: 128px;
+  font-size: 0;
+  background-color: transparent;
+  border: 1px solid #ececec;
+  outline: 0;
+  cursor: pointer;
+  &--prev {
+
+  }
+  &--next {
+    border-left: none;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: .3;
+  }
+  @include tablet {
+    width: 87px;
+    border: none;
+  }
+}
+
+.reviews__icon {
+
+}
+
+.reviews__button-write {
+  display: block;
+  width: 100%;
+  padding: 14px 0px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #444444;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include tablet {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    width: 175px;
+    box-sizing: border-box;
+  }
+  @include desktop {
+    top: 86px;
+    right: 100px;
+  }
+}

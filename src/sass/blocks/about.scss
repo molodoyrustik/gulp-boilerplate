@@ -1,0 +1,119 @@
+.about {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  @include tablet {
+    padding-top: 55px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+  }
+  @include desktop {
+    padding-top: 70px;
+  }
+}
+
+.about__wrapper {
+  @include desktop {
+    padding-left: 175px;
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 27.5px;
+  padding: 0;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+    font-size: 54px;
+    line-height: 57px;
+  }
+}
+
+.about__list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.about__item {
+  position: relative;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  padding-top: 58px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000000;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  
+  &--flower {
+    .about__item-icon {
+      left: 7px;
+    }
+  }
+  &--price {
+    .about__item-icon {
+      left: 0;
+    }
+  }
+  &--heart {
+    .about__item-icon {
+      left: 7px;
+    }
+  }
+  &--ball {
+    .about__item-icon {
+      left: 3px;
+    }
+  }
+  &--rocket {
+    .about__item-icon {
+      left: -7px;
+    }
+  }
+  &--present {
+    .about__item-icon {
+      left: 3px;
+    }
+  }
+
+  @include tablet {
+    width: 50%;
+    margin-bottom: 60px;
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+    .about__text {
+      width: 260px;
+    }
+  }
+  @include desktop {
+    width: 350px;
+    font-size: 20px;
+    line-height: 22px;
+    .about__text {
+      width: 300px;
+    }
+  }
+}
+
+.about__item-icon {
+  position: absolute;
+  top: 0;
+  display: block;
+  fill: #63d1bb;
+}

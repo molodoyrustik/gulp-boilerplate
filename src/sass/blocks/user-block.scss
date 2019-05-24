@@ -1,0 +1,103 @@
+.user-block {
+  font-weight: bold;
+}
+
+
+.user-block__list {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.user-block__item {
+  border-top: 1px solid #ececec;
+  &:last-child {
+    border-bottom: 1px solid #ececec;
+  }
+  @include tablet {
+    border: none;
+    border-left: 1px solid #ececec;
+    &:last-child {
+      border: none;
+      border-left: 1px solid #ececec;
+    }
+  }
+}
+
+.user-block__link {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  background-position: 30px center;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    color: rgba(#000000, 0.6);
+    .user-block__icon {
+      fill: #63d1bb;
+    }
+  }
+  &:active {
+    color: rgba(#000000, 0.3);
+    .user-block__icon {
+      fill: rgba(#63d1bb, 0.3);
+    }
+  }
+
+  @include tablet {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 31px;
+  }
+}
+
+.user-block__link--search {
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+
+.user-block__text--search {
+  @include tablet {
+    display: none;
+  }
+}
+
+.user-block__icon {
+  fill: #d3d2d2;
+}
+
+.user-block__text {
+  width: 215px;
+  margin-left: 25px;
+  margin-right: auto;
+  @include tablet {
+    width: auto;
+    margin-left: 31px;
+    margin-right: 0px;
+  }
+}
+
+
+// только для мобильных экранов
+@media (max-width: $mobile-width-only) {
+  
+}
